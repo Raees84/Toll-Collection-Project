@@ -1,0 +1,207 @@
+MDScreen:
+	name: "home"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+
+		orientation: "vertical"      
+
+	    MDLabel:
+			text: "Toll Gate"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}
+
+		Image:
+			source: "logo.png"
+			size_hint: 3, 3
+			pos_hint: {"center_x": .5, "center_y": .80}
+
+		MDLabel:
+			text: "Quick.Easy."
+			font_size: "15sp"
+			font_name: "Poppins-Italic.ttf"
+			color: 226/255, 0, 48/255, 1
+			pos_hint: {"center_x": .5, "center_y": .65}
+			halign: "center"
+
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .125, "center_y": .5}
+			on_release: app.goToAccount()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "account.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Account"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .125, "center_y": .45} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .375, "center_y": .5}
+			on_release: app.goToDeposit()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "cash.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Deposit"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .375, "center_y": .45} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .625, "center_y": .5}
+			on_release: app.goToHistory()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "history.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "History"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .625, "center_y": .45} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .875, "center_y": .5}
+			on_release: app.goToVehicleSettings()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "vehicle settings.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Vehicle\n Settings"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .875, "center_y": .44} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+		
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .125, "center_y": .3}
+			on_release: app.goToVehicles()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "vehicles.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Vehicles"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .125, "center_y": .25} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .375, "center_y": .3}
+			on_release: app.goToInformation()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "information.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Information"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .375, "center_y": .25} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .625, "center_y": .3}
+			on_release: app.goToSettings()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "settings.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Settings"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .625, "center_y": .25} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .875, "center_y": .3}
+			on_release: app.goToTransfers()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "transfers.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Transfers"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .875, "center_y": .25} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .125, "center_y": .1}
+			on_release: app.logoff()
+			Image:
+				source: "border.png"
+				size_hint: 2, 2
+			Image:
+				source: "logoff.png"
+				size_hint: 1.9, 1.9
+		MDLabel:
+			text: "Log off"
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .125, "center_y": .05} 
+			halign: "center"
+			#color: 120/255, 120/255, 120/255, 1
+		

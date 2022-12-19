@@ -1,0 +1,96 @@
+MDScreen:
+	on_enter:
+		app.changeAccountLabels(account, balance)
+
+	name: "account"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+		MDLabel:
+			text: "Account"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}	
+
+		MDLabel:
+			text: "Your account"
+			font_size: "15sp"
+			font_name: "Poppins-Regular.ttf"
+			color: 226/255, 0, 48/255, 1
+			pos_hint: {"center_x": .6, "center_y": .8}	
+
+		MDFlatButton:
+			#text: "Username"
+			line_color: "red"
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			background_color: 0, 0, 0, 0
+			font_name: "Poppins-Medium.ttf"
+			on_press:
+				#app.setName(firstName, lastName)
+			on_release:
+				#root.manager.transition.direction = "left"
+				#root.manager.current = "gender"
+				app.goToTransactionHistory()
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .7}
+			canvas.before:
+				Color:
+					#rgb: 226/255, 0, 48/255, 1
+					rgb: 1, 1, 1, 1
+				RoundedRectangle:
+					size: self.size
+					pos:self.pos
+					radius: [2] 
+
+			MDLabel:
+				id: account
+				text: "  Your account"
+				font_size: "13sp"
+				font_name: "Poppins-Regular.ttf"
+				#color: 226/255, 0, 48/255, 1
+				halign: "left"
+				pos_hint: {"center_x": .7, "center_y": .7}
+
+			MDLabel:
+				id: balance
+				text: "Balance  "
+				font_size: "13sp"
+				font_name: "Poppins-Regular.ttf"
+				#color: 226/255, 0, 48/255, 1
+				halign: "right"
+				pos_hint: {"center_x": .7, "center_y": .7}
+
+		MDFloatLayout:
+			pos_hint: {"center_x": .5, "center_y": .1}
+			size_hint_y: .001
+			md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDTextButton:
+			text: "HOME"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .15, "center_y": .05}
+			halign: "left"
+			#color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .9, "center_y": .05}
+			on_release: app.refreshAccount(account, balance)
+			Image:
+				source:"refresh.png"
+				size_hint: 1.5, 1.5
+	

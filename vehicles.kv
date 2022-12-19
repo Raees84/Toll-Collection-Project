@@ -1,0 +1,125 @@
+MDScreen:
+	name: "vehicles"
+	on_enter: app.displayVehicles(gridLayout, registrationNumberLabel1, registrationNumberLabel2, registrationNumberLabel3, registrationNumberLabel4, registrationNumberLabel5, registrationNumberLabel6, registrationNumberLabel7, registrationNumberLabel8, registrationNumberLabel9, registrationNumberLabel10)
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+		MDLabel:
+			text: "Vehicles"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}	
+
+		MDLabel:
+			text: "Your vehicles"
+			font_size: "15sp"
+			font_name: "Poppins-Regular.ttf"
+			color: 226/255, 0, 48/255, 1
+			pos_hint: {"center_x": .6, "center_y": .85}
+
+		ScrollView:
+			size: self.size
+			pos_hint: {"center_y": .3}
+
+			GridLayout:
+				id: gridLayout
+				size_hint_y: None
+				height: self.minimum_height
+				width: self.minimum_width
+				cols: 1
+				rows: 1
+				spacing: "20dp"
+				padding: "20dp"
+
+				MDLabel:
+					id: registrationNumberLabel1
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+				MDLabel:
+					id: registrationNumberLabel2
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+				MDLabel:
+					id: registrationNumberLabel3
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: registrationNumberLabel4
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: registrationNumberLabel5
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: registrationNumberLabel6
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: registrationNumberLabel7
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: registrationNumberLabel8
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: registrationNumberLabel9
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: registrationNumberLabel10
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+		MDFloatLayout:
+			pos_hint: {"center_x": .5, "center_y": .1}
+			size_hint_y: .001
+			md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDTextButton:
+			text: "HOME"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .15, "center_y": .05}
+			halign: "left"
+			#color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+				 

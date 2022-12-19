@@ -1,0 +1,67 @@
+MDScreen:
+	name: "signup"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "login"
+
+		MDLabel:
+			text: "Create account"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}
+
+		Image:
+			source: "logo.png"
+			size_hint: .26, .26
+			pos_hint: {"center_x": .5, "center_y": .80}
+
+		MDLabel:
+			text: "Join Toll Gate"
+			font_size: "15sp"
+			font_name: "Poppins-SemiBold.ttf"
+			color: 0, 0, 0, 1
+			pos_hint: {"center_x": .5, "center_y": .65}
+			halign: "center"
+
+		MDLabel:
+			text: "We'll help you create a new account in a few easy steps."
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .5, "center_y": .55} 
+			halign: "center"
+			color: 120/255, 120/255, 120/255, 1
+
+		MDFlatButton:
+			text: "Next"
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			background_color: 0, 0, 0, 0
+			font_name: "Poppins-Medium.ttf"
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "name"
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .45}
+			canvas.before:
+				Color:
+					rgb: 226/255, 0, 48/255, 1
+				RoundedRectangle:
+					size: self.size
+					pos:self.pos
+					radius: [2] 
+
+		MDTextButton:
+			text: "Already have an account?"
+			font_size: "13sp"
+			pos_hint: {"center_x": .5, "center_y": .25}
+			halign: "center"
+			color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "login"

@@ -1,0 +1,100 @@
+MDScreen:
+	name: "vehicleSettings"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+		MDLabel:
+			text: "Vehicle Settings"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}	
+
+
+		MDFlatButton:
+			line_color: "red"
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			background_color: 0, 0, 0, 0
+			font_name: "Poppins-Medium.ttf"
+			on_press:
+				#app.setName(firstName, lastName)
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "addVehicle"
+				
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .7}
+			canvas.before:
+				Color:
+					#rgb: 226/255, 0, 48/255, 1
+					rgb: 1, 1, 1, 1
+				RoundedRectangle:
+					size: self.size
+					pos:self.pos
+					radius: [2] 
+
+			MDLabel:
+				#id: account
+				text: "  Add vehicle"
+				font_size: "13sp"
+				font_name: "Poppins-Regular.ttf"
+				#color: 226/255, 0, 48/255, 1
+				halign: "left"
+				pos_hint: {"center_x": .7, "center_y": .7}
+
+		MDFlatButton:
+			line_color: "red"
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			background_color: 0, 0, 0, 0
+			font_name: "Poppins-Medium.ttf"
+			on_press:
+				#app.setName(firstName, lastName)
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "removeVehicle"
+				
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .6}
+			canvas.before:
+				Color:
+					#rgb: 226/255, 0, 48/255, 1
+					rgb: 1, 1, 1, 1
+				RoundedRectangle:
+					size: self.size
+					pos:self.pos
+					radius: [2] 
+
+			MDLabel:
+				#id: account
+				text: "  Remove vehicle"
+				font_size: "13sp"
+				font_name: "Poppins-Regular.ttf"
+				#color: 226/255, 0, 48/255, 1
+				halign: "left"
+				pos_hint: {"center_x": .7, "center_y": .7}
+
+
+
+		MDFloatLayout:
+			pos_hint: {"center_x": .5, "center_y": .1}
+			size_hint_y: .001
+			md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDTextButton:
+			text: "HOME"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .15, "center_y": .05}
+			halign: "left"
+			#color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"

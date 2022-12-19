@@ -1,0 +1,38 @@
+MDScreen:
+	name: "pre-splash"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+
+
+		Image:
+			source: "logo.png"
+			size_hint: .7, .7
+			pos_hint:{"center_x": .5, "center_y":.65}
+			halign: "center"
+			canvas.before:
+				Color:
+					rgb: 1, 1, 1, 1
+				Ellipse:
+					size: 400, 400
+					#pos: 600, 340
+					#pos: [self.center_x - 100/2, self.center_y - 100/2]
+					size: self.size
+					pos: self.pos
+
+		MDLabel:
+			text: "Toll Gate"
+			pos_hint:{"center_x": .5, "center_y":.2}
+			halign:"center"
+			theme_text_color: "Custom"
+			text_color: 226/255, 0, 48/255, 1
+			font_size: "35sp"
+			font_name: "Poppins-SemiBold.ttf"
+
+		MDLabel:
+			text: "Quick.Easy."
+			pos_hint:{"center_x": .5, "center_y":.15}
+			halign:"center"
+			theme_text_color: "Custom"
+			text_color: 226/255, 0, 48/255, 1
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"

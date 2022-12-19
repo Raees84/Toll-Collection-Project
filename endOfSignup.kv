@@ -1,0 +1,58 @@
+MDScreen:
+	name: "endOfSignup"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "login"
+
+		MDLabel:
+			text: "Terms & Privacy"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}		
+
+		MDLabel:
+			text: "Finish signing up"
+			font_size: "15sp"
+			font_name: "Poppins-SemiBold.ttf"
+			color: 0, 0, 0, 1
+			pos_hint: {"center_x": .5, "center_y": .75}
+			halign: "center"
+
+		MDLabel:
+			text: "By tapping SIGN UP, you agree to our Terms. You may receive SMS notifications and emails from us."
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .5, "center_y": .70} 
+			halign: "center"
+			color: 120/255, 120/255, 120/255, 1	
+
+
+		MDFlatButton:
+			text: "SIGN UP"
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			background_color: 0, 0, 0, 0
+			font_name: "Poppins-SemiBold.ttf"
+			#on_press: app.send_data(username, firstName, lastname, gender, employmentStatus, emailAddress, mobileNumber, userPassword)
+			#on_press: app.update_database()
+			#usernameID = app.setUsernameID()
+			#on_press: app.send_data()
+			on_release:
+				app.send_data()
+				#root.manager.transition.direction = "left"
+				#root.manager.current = "home"
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .33}
+			canvas.before:
+				Color:
+					rgb: 226/255, 0, 48/255, 1
+				RoundedRectangle:
+					size: self.size
+					pos:self.pos
+					radius: [2] 

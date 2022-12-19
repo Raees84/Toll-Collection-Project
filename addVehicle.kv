@@ -1,0 +1,79 @@
+MDScreen:
+	name: "addVehicle"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "vehicleSettings"
+
+		MDLabel:
+			text: "Add Vehicle"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}	
+
+		MDLabel:
+			text: "Enter vehicle registration number"
+			font_size: "15sp"
+			font_name: "Poppins-Regular.ttf"
+			color: 226/255, 0, 48/255, 1
+			pos_hint: {"center_x": .6, "center_y": .8}	
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .7}
+			MDLabel:
+				text: "Registration number"
+				font_size: "13sp"
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			TextInput:
+				id: identifier
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				cursor_color: 0, 0, 0, 1
+				cursor_width: "2sp"
+				foreground_color: 120/255, 120/255, 120/255, 1
+				font_size: "15sp"
+				multiline: False
+				
+			
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		
+		
+		MDFloatLayout:
+			pos_hint: {"center_x": .5, "center_y": .1}
+			size_hint_y: .001
+			md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDTextButton:
+			text: "BACK"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .15, "center_y": .05}
+			halign: "left"
+			#color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "vehicleSettings"
+
+		MDTextButton:
+			text: "ADD"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .85, "center_y": .05}
+			halign: "center"
+			on_release:
+				app.addVehicle(identifier)
+			
+	

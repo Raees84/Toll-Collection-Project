@@ -1,0 +1,134 @@
+MDScreen:
+	on_enter: app.displayTollHistory(gridLayout, tollHistory1, tollHistory2, tollHistory3, tollHistory4, tollHistory5, tollHistory6, tollHistory7, tollHistory8, tollHistory9, tollHistory10)
+	name: "history"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+		MDLabel:
+			text: "Toll History"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}	
+
+
+		MDLabel:
+			text: "Your toll history"
+			font_size: "15sp"
+			font_name: "Poppins-Regular.ttf"
+			color: 226/255, 0, 48/255, 1
+			pos_hint: {"center_x": .6, "center_y": .85}	
+
+		ScrollView:
+			size: self.size
+			pos_hint: {"center_y": .3}
+
+			GridLayout:
+				id: gridLayout
+				size_hint_y: None
+				height: self.minimum_height
+				width: self.minimum_width
+				cols: 1
+				rows: 1
+				spacing: "20dp"
+				padding: "20dp"
+
+				MDLabel:
+					id: tollHistory1
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+				MDLabel:
+					id: tollHistory2
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+				MDLabel:
+					id: tollHistory3
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: tollHistory4
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: tollHistory5
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: tollHistory6
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: tollHistory7
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: tollHistory8
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: tollHistory9
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: tollHistory10
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+
+		MDFloatLayout:
+			pos_hint: {"center_x": .5, "center_y": .1}
+			size_hint_y: .001
+			md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDTextButton:
+			text: "HOME"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .15, "center_y": .05}
+			halign: "left"
+			#color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .9, "center_y": .05}
+			on_release: app.displayTollHistory(gridLayout, tollHistory1, tollHistory2, tollHistory3, tollHistory4, tollHistory5, tollHistory6, tollHistory7, tollHistory8, tollHistory9, tollHistory10)
+			Image:
+				source:"refresh.png"
+				size_hint: 1.5, 1.5

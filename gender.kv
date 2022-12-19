@@ -1,0 +1,103 @@
+MDScreen:
+	name: "gender"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "login"
+
+		MDLabel:
+			text: "Gender"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}
+
+		MDLabel:
+			text: "What's your gender?"
+			font_size: "15sp"
+			font_name: "Poppins-SemiBold.ttf"
+			color: 0, 0, 0, 1
+			pos_hint: {"center_x": .5, "center_y": .75}
+			halign: "center"
+
+		MDLabel:
+			text: "Enter your gender identification."
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .5, "center_y": .70} 
+			halign: "center"
+			color: 120/255, 120/255, 120/255, 1	
+
+		MDFloatLayout:
+			md_bg_color: rgba(178, 178, 178, 255)
+			size_hint: .8, .002
+			pos_hint: {"center_x": .5, "center_y": .65}
+			halign: "center"
+
+		MDLabel:
+			text: "Male"
+			font_size: "14sp"
+			font_name: "Poppins-SemiBold.ttf"
+			pos_hint: {"center_x": .3, "center_y": .60} 
+			halign: "center"
+			color: 0, 0, 0, 1
+
+		MDCheckbox:
+			group: "group"
+			id: male
+			pos_hint: {"center_x": .8, "center_y": .60} 
+			size_hint: .06, .06
+			selected_color: 226/255, 0, 48/255, 1
+			on_active: app.checkMale(*args)
+
+		MDFloatLayout:
+			md_bg_color: rgba(178, 178, 178, 255)
+			size_hint: .8, .002
+			pos_hint: {"center_x": .5, "center_y": .55}
+			halign: "center"
+
+		MDLabel:
+			text: "Female"
+			font_size: "14sp"
+			font_name: "Poppins-SemiBold.ttf"
+			pos_hint: {"center_x": .3, "center_y": .50} 
+			halign: "center"
+			color: 0, 0, 0, 1
+
+		MDCheckbox:
+			group: "group"
+			id: female
+			pos_hint: {"center_x": .8, "center_y": .50} 
+			size_hint: .06, .06
+			selected_color: 226/255, 0, 48/255, 1
+			on_active: app.checkFemale(*args)
+
+		
+		MDFloatLayout:
+			md_bg_color: rgba(178, 178, 178, 255)
+			size_hint: .8, .002
+			pos_hint: {"center_x": .5, "center_y": .45}
+			halign: "center"
+
+		MDFlatButton:
+			text: "Next"
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			background_color: 0, 0, 0, 0
+			font_name: "Poppins-Medium.ttf"
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "employmentStatus"
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .33}
+			canvas.before:
+				Color:
+					rgb: 226/255, 0, 48/255, 1
+				RoundedRectangle:
+					size: self.size
+					pos:self.pos
+					radius: [2] 

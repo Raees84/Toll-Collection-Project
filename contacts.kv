@@ -1,0 +1,103 @@
+MDScreen:
+	name: "contacts"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "login"
+
+		MDLabel:
+			text: "Contact details"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}		
+
+		MDLabel:
+			text: "Enter your contact details"
+			font_size: "15sp"
+			font_name: "Poppins-SemiBold.ttf"
+			color: 0, 0, 0, 1
+			pos_hint: {"center_x": .5, "center_y": .75}
+			halign: "center"
+
+		MDLabel:
+			text: "Enter the mobile number and email address where you can be reached."
+			font_size: "13sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .5, "center_y": .70} 
+			halign: "center"
+			color: 120/255, 120/255, 120/255, 1	
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .60}
+			MDLabel:
+				text: "Mobile number"
+				font_size: "14sp"
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			TextInput:
+				id: mobileNumber
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				cursor_color: 0, 0, 0, 1
+				cursor_width: "2sp"
+				foreground_color: 120/255, 120/255, 120/255, 1
+				font_size: "17sp"
+				multiline: False
+			
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .50}
+			MDLabel:
+				text: "Email address"
+				font_size: "14sp"
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			TextInput:
+				id: emailAddress
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				cursor_color: 0, 0, 0, 1
+				cursor_width: "2sp"
+				foreground_color: 120/255, 120/255, 120/255, 1
+				font_size: "17sp"
+				multiline: False
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFlatButton:
+			text: "Next"
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			background_color: 0, 0, 0, 0
+			font_name: "Poppins-Medium.ttf"
+			#on_press: app.setContacts(mobileNumber, emailAddress)
+			on_release:
+				app.setContacts(mobileNumber, emailAddress)
+				#root.manager.transition.direction = "left"
+				#root.manager.current = "username"
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .33}
+			canvas.before:
+				Color:
+					rgb: 226/255, 0, 48/255, 1
+				RoundedRectangle:
+					size: self.size
+					pos:self.pos
+					radius: [2] 

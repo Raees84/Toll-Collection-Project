@@ -1,0 +1,229 @@
+MDScreen:
+	on_enter:
+		app.getInformation(firstName, lastName, usernameInfo, gender, employmentStatus, phoneNumber, emailAddress)
+	name: "information"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"
+
+		MDLabel:
+			text: "Information"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}	
+
+
+		MDLabel:
+			text: "Your information"
+			font_size: "15sp"
+			font_name: "Poppins-Regular.ttf"
+			color: 226/255, 0, 48/255, 1
+			pos_hint: {"center_x": .6, "center_y": .88}	
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .8}
+			MDLabel:
+				text: "First name"
+				font_size: "13sp"
+				font_name: "Poppins-Medium.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			MDLabel:
+				id: firstName
+				text: "First Name"
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				#cursor_color: 0, 0, 0, 1
+				#cursor_width: "2sp"
+				#foreground_color: 120/255, 120/255, 120/255, 1
+				#color: 226/255, 0, 48/255, 1
+				font_size: "15sp"
+				multiline: False
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .7}
+			MDLabel:
+				text: "Last name"
+				font_size: "13sp"
+				font_name: "Poppins-Medium.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			MDLabel:
+				id: lastName
+				text: "Last Name"
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				#cursor_color: 0, 0, 0, 1
+				#cursor_width: "2sp"
+				#foreground_color: 120/255, 120/255, 120/255, 1
+				#color: 226/255, 0, 48/255, 1
+				font_size: "15sp"
+				multiline: False
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .6}
+			MDLabel:
+				text: "Username"
+				font_size: "13sp"
+				font_name: "Poppins-Medium.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			MDLabel:
+				id: usernameInfo
+				text: "Username"
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				#cursor_color: 0, 0, 0, 1
+				#cursor_width: "2sp"
+				#foreground_color: 120/255, 120/255, 120/255, 1
+				#color: 226/255, 0, 48/255, 1
+				font_size: "15sp"
+				multiline: False
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .5}
+			MDLabel:
+				text: "Gender"
+				font_size: "13sp"
+				font_name: "Poppins-Medium.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			MDLabel:
+				id: gender
+				text: "Gender"
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				cursor_color: 0, 0, 0, 1
+				cursor_width: "2sp"
+				#foreground_color: 120/255, 120/255, 120/255, 1
+				#color: 226/255, 0, 48/255, 1
+				font_size: "15sp"
+				multiline: False
+				password: True
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .4}
+			MDLabel:
+				text: "Employment status"
+				font_size: "13sp"
+				font_name: "Poppins-Medium.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			MDLabel:
+				id: employmentStatus
+				text: "Employment Status"
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				cursor_color: 0, 0, 0, 1
+				cursor_width: "2sp"
+				#foreground_color: 120/255, 120/255, 120/255, 1
+				#color: 226/255, 0, 48/255, 1
+				font_size: "15sp"
+				multiline: False
+				password: True
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .3}
+			MDLabel:
+				text: "Phone number"
+				font_size: "13sp"
+				font_name: "Poppins-Medium.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			MDLabel:
+				id: phoneNumber
+				text: "Phone Number"
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				cursor_color: 0, 0, 0, 1
+				cursor_width: "2sp"
+				#foreground_color: 120/255, 120/255, 120/255, 1
+				#color: 226/255, 0, 48/255, 1
+				font_size: "15sp"
+				multiline: False
+				password: True
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			size_hint: .79, .08
+			pos_hint: {"center_x": .5, "center_y": .2}
+			MDLabel:
+				text: "Email address"
+				font_size: "13sp"
+				font_name: "Poppins-Medium.ttf"
+				pos_hint: {"center_x": .5, "center_y": .9}
+			MDLabel:
+				id: emailAddress
+				text: "Email address"
+				size_hint_y: .75
+				font_name: "Poppins-Regular.ttf"
+				pos_hint: {"center_x": .49, "center_y": .4}
+				background_color: 0, 0, 0, 0
+				cursor_color: 0, 0, 0, 1
+				cursor_width: "2sp"
+				#foreground_color: 120/255, 120/255, 120/255, 1
+				#color: 226/255, 0, 48/255, 1
+				font_size: "15sp"
+				multiline: False
+				password: True
+			MDFloatLayout:
+				pos_hint: {"center_x": .5, "center_y": .0}
+				size_hint_y: .03
+				md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDFloatLayout:
+			pos_hint: {"center_x": .5, "center_y": .1}
+			size_hint_y: .001
+			md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDTextButton:
+			text: "HOME"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .15, "center_y": .05}
+			halign: "left"
+			#color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "home"

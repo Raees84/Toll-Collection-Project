@@ -1,0 +1,135 @@
+MDScreen:
+	on_enter: app.displayTransactionHistory(gridLayout, transactionHistory1, transactionHistory2, transactionHistory3, transactionHistory4, transactionHistory5, transactionHistory6, transactionHistory7, transactionHistory8, transactionHistory9, transactionHistory10)
+	name: "transactions"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		MDIconButton:
+			icon: "chevron-left"
+			user_font_size: "35sp"
+			pos_hint: {"center_y": .95}
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "account"
+
+		MDLabel:
+			text: "Account"
+			font_size: "18sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .65, "center_y": .949}	
+
+		MDLabel:
+			text: "Transaction History"
+			font_size: "15sp"
+			font_name: "Poppins-Regular.ttf"
+			color: 226/255, 0, 48/255, 1
+			pos_hint: {"center_x": .6, "center_y": .85}	
+
+		ScrollView:
+			size: self.size
+			pos_hint: {"center_y": .3}
+
+			GridLayout:
+				id: gridLayout
+				size_hint_y: None
+				height: self.minimum_height
+				width: self.minimum_width
+				cols: 1
+				rows: 1
+				spacing: "20dp"
+				padding: "20dp"
+
+				MDLabel:
+					id: transactionHistory1
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+				MDLabel:
+					id: transactionHistory2
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+				MDLabel:
+					id: transactionHistory3
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: transactionHistory4
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: transactionHistory5
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: transactionHistory6
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: transactionHistory7
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: transactionHistory8
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: transactionHistory9
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+					
+
+				MDLabel:
+					id: transactionHistory10
+					text: ""
+					font_size: "13sp"
+					font_name: "Poppins-Regular.ttf"
+
+
+		MDFloatLayout:
+			pos_hint: {"center_x": .5, "center_y": .1}
+			size_hint_y: .001
+			md_bg_color: 120/255, 120/255, 120/255, 1
+
+		MDTextButton:
+			text: "BACK"
+			font_size: "17sp"
+			font_name: "Poppins-Regular.ttf"
+			pos_hint: {"center_x": .15, "center_y": .05}
+			halign: "left"
+			#color: 226/255, 0, 48/255, 1
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "account"
+
+		MDIconButton:
+			theme_text_color: "Custom"
+			text_color: 1, 1, 1, 1
+			user_font_size: "48sp"
+			pos_hint: {"center_x": .9, "center_y": .05}
+			on_release: app.displayTransactionHistory(gridLayout, transactionHistory1, transactionHistory2, transactionHistory3, transactionHistory4, transactionHistory5, transactionHistory6, transactionHistory7, transactionHistory8, transactionHistory9, transactionHistory10)
+			Image:
+				source:"refresh.png"
+				size_hint: 1.5, 1.5
+
+
